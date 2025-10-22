@@ -1,1 +1,217 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tom McDermott - Software Engineer">
+    <title>Tom McDermott</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.3em;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .link-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .link-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .link-card p {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        .gist-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .gist-list li {
+            margin: 10px 0;
+        }
+
+        .gist-list a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .gist-list a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tom McDermott</h1>
+        <p class="tagline">Software Engineer | Knowledge Management | Open Source</p>
+
+        <div class="section">
+            <h2>🌐 Sites</h2>
+            <div class="links">
+                <a href="https://tommcd.github.io/notes/" class="link-card">
+                    <h3>📚 Notes & Blog</h3>
+                    <p>Personal knowledge base with interconnected notes, blog posts, and 200k+ references</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📝 Gists</h2>
+            <p>Quick scripts and snippets:</p>
+            <ul class="gist-list">
+                <li><a href="https://gist.github.com/tommcd/ddffa80be82cfa8b855a85b22b78edda" target="_blank">Socials</a> - My social links</li>
+                <li><a href="https://gist.github.com/tommcd/36d454456c3f2b9a0ce03a813ea7befb" target="_blank">SDKMAN on git bash (Windows)</a> - Development environment setup</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <a href="https://gist.github.com/tommcd" target="_blank" style="color: #667eea;">View all gists →</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🔨 Projects</h2>
+            <div class="links">
+                <a href="https://github.com/tommcd/notes" class="link-card" target="_blank">
+                    <h3>notes</h3>
+                    <p>Knowledge management system with spec-driven architecture</p>
+                </a>
+                <a href="https://github.com/tommcd/wshims" class="link-card" target="_blank">
+                    <h3>wshims</h3>
+                    <p>Git Bash to WSL bridge for Amazon Q CLI</p>
+                </a>
+                <a href="https://github.com/tommcd/mdtk" class="link-card" target="_blank">
+                    <h3>mdtk</h3>
+                    <p>Markdown Toolkit for working with markdown files</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://github.com/tommcd" class="social-link" target="_blank">GitHub</a>
+            <a href="mailto:tcmcdermott@gmail.com" class="social-link">Email</a>
+        </div>
+
+        <div class="footer">
+            <p><strong>Building in public | Learning in public | Sharing in public</strong></p>
+        </div>
+    </div>
+</body>
+</html>
